@@ -93,7 +93,6 @@ Main components
 
   #cd-vertical-nav {
   position: fixed;
-  right: 40px;
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
@@ -104,7 +103,6 @@ Main components
   z-index: 1;
 }
  #cd-vertical-nav li {
-  text-align: right;
 }
  #cd-vertical-nav a {
   display: inline-block;
@@ -118,7 +116,6 @@ Main components
   clear: both;
 }
  #cd-vertical-nav a span {
-  float: right;
   display: inline-block;
   -webkit-transform: scale(0.6);
   -moz-transform: scale(0.6);
@@ -158,19 +155,18 @@ Main components
 }
  #cd-vertical-nav .cd-label {
   position: relative;
-  margin-right: 10px;
-  padding-right: .4em;
   color: #ccc;
-  font-size: 22px;
+  margin-left: 8px;
+  font-size: 40px;
   -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
   -moz-transition: -moz-transform 0.2s, opacity 0.2s;
   transition: transform 0.2s, opacity 0.2s;
   opacity: 1;
-  -webkit-transform-origin: 100% 50%;
+  -webkit-transform-origin: 100% 100%;
   -moz-transform-origin: 100% 50%;
   -ms-transform-origin: 100% 50%;
   -o-transform-origin: 100% 50%;
-  transform-origin: 100% 50%;
+  transform-origin: 0% 100%;
 }
 
 }
