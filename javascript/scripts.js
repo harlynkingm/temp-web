@@ -71,6 +71,33 @@ jQuery(document).ready(function(){
         }
     });
     
+    $("#me").click(function(event){
+        var relX = event.pageX - $("#mypicture").offset().left;
+        var relY = event.pageY - $("#mypicture").offset().top;
+        var magicNum = 20;
+        if (relX > magicNum && relY < magicNum * -1){
+            $("#mypicture").attr("src", "images/max-top-right.png");
+        }
+        else if (relX < -1 * magicNum && relY > magicNum){
+            $("#mypicture").attr("src", "images/max-bottom-left.png");
+        }
+        else if (relX > magicNum && relY > magicNum){
+            $("#mypicture").attr("src", "images/max-bottom-right.png");
+        }
+        else if (relX < magicNum && relY > magicNum){
+            $("#mypicture").attr("src", "images/max-down.png");
+        }
+        else if (relX > magicNum){
+            $("#mypicture").attr("src", "images/max-right.png");
+        }
+        else if (relX < -1 * magicNum){
+            $("#mypicture").attr("src", "images/max-left.png");
+        }
+        else{
+            $("#mypicture").attr("src", "images/max.png");
+        }
+    });
+    
     function blink(){
         setTimeout(function(){
             $("#mypicture").attr("src", "images/max-closed.png");
