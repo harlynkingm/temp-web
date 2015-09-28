@@ -29,11 +29,13 @@ jQuery(document).ready(function(){
     });
     
     $("#story1").on("click", function(){
+        $(".modal-dialog").scrollTop(0);
         $("#story-content").html(story1);
         $("#story-title").html("I Wrote, No, I Scribbled");
     });
     
     $("#story2").on("click", function(){
+        $(".modal-dialog").scrollTop(0);
         $("#story-content").html(story2);
         $("#story-title").html("Are You Having Fun Yet?");
     });
