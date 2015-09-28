@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/vertical-nav.css">
+  <link rel="stylesheet" href="css/flaticon.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -36,50 +36,14 @@
 
 </head>
 <body>
-    <nav id="cd-vertical-nav">
-		<ul>
-			<li>
-				<a href="#me">
-					<span class="cd-dot"></span>
-					<span class="cd-label">Me</span>
-				</a>
-			</li>
-			<li>
-				<a href="#web">
-					<span class="cd-dot"></span>
-					<span class="cd-label">Web</span>
-				</a>
-			</li>
-			<li>
-				<a href="#apps">
-					<span class="cd-dot"></span>
-					<span class="cd-label">Apps</span>
-				</a>
-			</li>
-			<li>
-				<a href="#film">
-					<span class="cd-dot"></span>
-					<span class="cd-label">Film</span>
-				</a>
-			</li>
-			<li>
-				<a href="#music">
-					<span class="cd-dot"></span>
-					<span class="cd-label">Music</span>
-				</a>
-			</li>
-			<li>
-				<a href="#writing">
-					<span class="cd-dot"></span>
-					<span class="cd-label">Writing</span>
-				</a>
-			</li>
-		</ul>
-	</nav>
-<!--
-    <nav id="left-nav" class="hidemobile">
+    <nav id="left-nav" class="hidemobile" style="display:none">
+        <a href="#me"><div id="side-btn">Me</div></a>
+        <a href="#web"><div id="side-btn">Web</div></a>
+        <a href="#apps"><div id="side-btn">Apps</div></a>
+        <a href="#film"><div id="side-btn">Film</div></a>
+        <a href="#music"><div id="side-btn">Music</div></a>
+        <a href="#writing"><div id="side-btn">Writing</div></a>
     </nav>
--->
     <div class="mobile-menu" style="display:none">
         <a href="#me"><div class="mobile-item"><b>Me</b></div></a>
         <a href="#web"><div class="mobile-item"><b>Web</b></div></a>
@@ -94,6 +58,9 @@
     <div id="header">
         <a href="#top"><h1 id="title">Max Harlynking</h1></a>
     </div>
+    <div style="width: 400px; height: 80px; position: fixed; z-index: 100">
+        <span class="flaticon-menu55" id="sidenav-btn"></span>
+    </div>
         <div class="section top-img" id="top" style="max-height:25vh">
             <div class="container center toptext">
                 <h1 class="smalleronmobile" style="font-weight:600; margin-bottom: 5px;">Imagination, implemented.</h1>
@@ -105,7 +72,7 @@
             <div class="container">
                 <div class="row">
                     <div class="six columns">
-                        <img src="images/max.png" style="width:100%">
+                        <img id="mypicture" src="images/max.png" style="width:100%">
                     </div>
                     <div class="six columns center" style="padding-top:10%">
                             <h1 style="font-weight: 600">About Me</h1>

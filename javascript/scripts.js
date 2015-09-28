@@ -39,6 +39,51 @@ jQuery(document).ready(function(){
         $("#story-content").html(story2);
         $("#story-title").html("Are You Having Fun Yet?");
     });
+    
+    $("#sidenav-btn").on("click", function(){
+        $("#left-nav").animate({width:'toggle'},350);
+    });
+    
+    $("#me").mousemove(function(event){
+        var relX = event.pageX - $("#mypicture").offset().left;
+        var relY = event.pageY - $("#mypicture").offset().top;
+        var magicNum = 20;
+        if (relX > magicNum && relY < magicNum * -1){
+            $("#mypicture").attr("src", "images/max-top-right.png");
+        }
+        else if (relX < -1 * magicNum && relY > magicNum){
+            $("#mypicture").attr("src", "images/max-bottom-left.png");
+        }
+        else if (relX > magicNum && relY > magicNum){
+            $("#mypicture").attr("src", "images/max-bottom-right.png");
+        }
+        else if (relX < magicNum && relY > magicNum){
+            $("#mypicture").attr("src", "images/max-down.png");
+        }
+        else if (relX > magicNum){
+            $("#mypicture").attr("src", "images/max-right.png");
+        }
+        else if (relX < -1 * magicNum){
+            $("#mypicture").attr("src", "images/max-left.png");
+        }
+        else{
+            $("#mypicture").attr("src", "images/max.png");
+        }
+    });
+    
+    function blink(){
+        setTimeout(function(){
+            $("#mypicture").attr("src", "images/max-closed.png");
+        }, 5000);
+        setTimeout(function(){
+            $("#mypicture").attr("src", "images/max.png");
+        }, 5100);
+        setTimeout(function(){
+            blink();
+        }, 6000);
+    }
+    
+    blink();
 });
 
 var story1 = "The grey man with the tall hat was having a marvelous Sunday afternoon.<br><br>Wait, hold on a second, I don’t think so. That’s a horrible way to begin a murder mystery. It leaves out all sense of mystery, particularly the part about the murder. After all, the grey man was the victim of the murder about to take place, the murderess being Alice, age 49. I messed up again. A proper writer would never give away the answer to his puzzle within the first few sentences of his writing. That is the wrong thing to do. Might as well begin with that classic ending line:<br><br>So, does anybody know whats for dinner? The grey man gasped for air, nothing came. He began to shake, his stomach sinking into oblivion. That really is the climax of this story. After all, why would one write a murder mystery if there had not been a murder?<br><br>It came to an end on a strangely chilly August evening, the kind of night in which dogs kill their owners and the such. That appears to be a common thing too. At least, in my neighborhood. The ink then bled onto this paper, as did the grey-man’s wrecked heart. Too bad Alice wasn’t there to see the case through- looks like this was going to be a one woman job. It did turn out, however, that he was a poisoned man of great stature. Tall men always are.<br><br>Jupiter is one of the several planets visible from the big red planet right next to that inhabited blue and green one, according to most normal people anyway. Also the dog, who licked that man’s cold, dead, face was there too. Insanity is more of a work of art then a menace, as tends to be the case with confused men with grey faces and tall hats, which is how Alice thought her marriage with the tall grey man would turn out. The subject of this paragraph is the growth of insanity.<br><br>His books lie in a pile of flames. Don’t read them, or else I’m afraid you’ll end up retarded, or something along those lines. The house was being cleaned out by empty people like a dishwasher would clean a polished set of poisoned dishes. Sometimes Alice wondered what on that green and blue planet she was doing with the poison, and other times, she wondered why we can’t eat at our own will, rather then having to wait for someone to supply the food for us.<br><br>She had the eyes of a tiger, the mouth of a lion, the hands of a leopard, the legs of a hyena. Yet, she was none of those things for which she had so dearly hoped. Why? Why did she do it? It’s been awhile since we visited the pool with the grey man, so it’s time to get back to that. He’s the protagonist, anyway. He walked home the way a tall man with a nice hat would. Very quietly. That's the denouement of my story, I’m afraid. I often worry about these things.<br><br>Alice had a short father. Then again, most were short compared to the tall man. She was a rough creature only concerned with the material nature of things, like food. She also had a nonexistent mother of ten. According to Merriam-Webster, the definition of nonexistent is to be absent of existence, which also happened to define Alice’s newly dead father and husband. Alice didn’t know where her other siblings got themselves off to, neither did she much care.<br><br>The cookies were always well baked, laced with a healthy dose of potent sugary cyanide. The grey man stuttered, nearly collapsing on the nearby bearskin rug. Wouldn't want to do that, would he? That was a real bear once. He laughed for the last time, as that bear had its brains removed upon its death. If only we could all have that bliss upon our existence. Can you imagine what it must be like to be a brainless freak like us?<br><br>It was a tiring job for Alice, who was used to nocturnal restlessness, to get him out of that room. Drag, pull, drag, pull. Relax. Often she took the quantum leap to unconsciousness. By the bearskin rug, the grey man's organs put up their for-sale signs. Bye-bye liver, who just so happened to be on strike for internal abuse. He was sick already, the grey man shivered. Getting up out of his chair by the pool, he had just wanted some cookies.<br><br>Spoiler alert: the tall man with the grey hat was Alice’s father through adoption, but she preferred to believe they were married. Alice did not decide to marry within the family; not even within the species. At least, as is the opinion of 94% of today’s qualified scientists. What is it like, spoiled and brain-dead, like a sack of 152 lb. human-jerky. He was not eaten like most, we imagine.<br><br>In conclusion, there was a man, his dog Alice, and a mixed up tall hat which the grey man forgot by the pool he so willingfully left to go get poisoned. The general consensus seems to be he should not have done that. The grey man was hungry, so he got up from his poolside deck, looking forward to an afternoon swim. But he ate well. Too well. Alice killed her owner by accidentally spilling the cyanide on the counter top into his cookie batter.<br><br>Don’t swim until an hour after you eat, please.<br><br>Thank you."

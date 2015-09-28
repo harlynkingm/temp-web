@@ -21,9 +21,10 @@ h4, h5{
 #left-nav{
     position: fixed;
     width: 300px;
-    background-color: rgba(256, 256, 256, 1);
+    background-color: rgba(220, 220, 220, 1);
     z-index: 90;
     height: 100%;
+    margin-top: 80px;
 }
 
 #title{
@@ -32,9 +33,6 @@ h4, h5{
     font-weight: 600;
     text-align: center;
     line-height: 80px;
-    display: flex;
-    justify-content: center;
-    -webkit-justify-content: center;
     transition: .3s;
 }
 
@@ -111,7 +109,7 @@ h4, h5{
     -webkit-align-items: center;
 }
 
-@media (max-width: 1100px){
+@media (max-width: 800px){
     nav{
         display:none;
     }
@@ -182,6 +180,9 @@ h4, h5{
     .smalleronmobile2{
         font-size: 20px;
     }
+    #sidenav-btn{
+        display: none;
+    }
 }
 
 @media(max-width:600px){
@@ -197,11 +198,26 @@ h4, h5{
     .hidemobile{
         display: none !important;
     }
+    #sidenav-btn{
+        display: none;
+    }
 }
 
-@media(min-width: 1100px){
+@media(min-width: 800px){
     #mobile-nav{
         display: none;
+    }
+    
+    #sidenav-btn{
+        margin-left: 18px;
+        color: #eee;
+        font-size: 60px;
+        line-height: 85px;
+        transition: .3s;
+    }
+    #sidenav-btn:hover{
+        color: #e14e42;
+        cursor: pointer;
     }
 }
 
@@ -261,6 +277,7 @@ h4, h5{
   z-index: 11;
   width: 80%;
   transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
   height: 60%;
   top: 20%;
   overflow-y: scroll;
@@ -284,4 +301,18 @@ h4, h5{
     margin-left: 5%;
     margin-right: 5%;
     margin-top: -10px;
+}
+
+#side-btn{
+    height: 60px;
+    border-bottom: 2px solid #aaa;
+    padding-left: 18px;
+    line-height: 60px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#side-btn:hover{
+    background-color: #aaa;
+    color: #333;
 }
